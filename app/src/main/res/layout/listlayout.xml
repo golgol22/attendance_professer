@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/txtName"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_alignParentLeft="true"
+            android:text="이름"
+            android:textSize="18sp"
+            />
+
+        <TextView
+
+            android:id="@+id/txtClass"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="교시"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:layout_toRightOf="@+id/txtname"/>
+
+        <RadioGroup
+            android:id="@+id/rg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_toRightOf="@+id/txtname"
+            android:layout_weight="1">
+
+            <RadioButton
+                android:id="@+id/rdo1"
+                android:checked="true"
+                android:buttonTint="#1e7167"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <RadioButton
+                android:id="@+id/rdo2"
+                android:buttonTint="#1e7167"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+            <RadioButton
+                android:id="@+id/rdo3"
+                android:buttonTint="#1e7167"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+        </RadioGroup>
+        </LinearLayout>
+
+
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity2">
+
+    <android.support.v4.widget.DrawerLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/drawer_layout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+                <TableLayout
+                    android:layout_width="340dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:stretchColumns="*">
+                    <TableRow
+                        android:padding="10dp">
+                        <TextView
+                            android:id="@+id/name"
+                            android:layout_span="2"
+                            android:layout_gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="교수: "
+                            android:textSize="30dp" />
+                     </TableRow>
+
+                    <TableRow
+                        android:background="@color/colorPrimary">
+                        <TextView
+                            android:id="@+id/date"
+                            android:layout_span="2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="15dp"
+                            android:textSize="18sp"
+                            android:textColor="#ffffff"/>
+                    </TableRow>
+
+                    <TableRow>
+                        <TextView
+                            android:layout_width="30dp"
+                            android:layout_height="220dp"
+                            android:padding="20dp"
+                            android:text="1"
+                            android:textSize="30sp"
+                            android:background="#f6bb53"/>
+                        <TableLayout
+                            android:padding="20dp"
+                            android:layout_height="220dp"
+                            android:background="@color/colorAccent">
+                            <TableRow>
+                                <TextView
+                                    android:id="@+id/subject"
+                                    android:layout_span="2"
+                                    android:layout_weight="1"
+                                    android:textSize="30sp"/>
+                            </TableRow>
+                            <TableRow>
+                                <TextView
+                                    android:id="@+id/time"
+                                    android:layout_span="2"
+                                    android:layout_weight="1"
+                                    android:textSize="18sp"/>
+                            </TableRow>
+                            <TableRow>
+                                <Button
+                                    android:id="@+id/speak"
+                                    android:layout_weight="1"
+                                    android:text="호명방식"/>
+                                <Button
+                                    android:id="@+id/wifi-direct"
+                                    android:layout_weight="1"
+                                    android:text="wifi-direct"/>
+                            </TableRow>
+                        </TableLayout>
+
+                    </TableRow>
+                </TableLayout>
+
+            </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark" />
+        </RelativeLayout>
+
+        <android.support.design.widget.NavigationView
+            android:id="@+id/navigation_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            app:headerLayout="@layout/drawer_header"
+            app:menu="@menu/drawer"/>
+
+        <android.support.design.widget.NavigationView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start" />
+
+    </android.support.v4.widget.DrawerLayout>
+
+</android.support.constraint.ConstraintLayout>
+
